@@ -1,89 +1,119 @@
-body{
-      background-color:rgba(252, 237, 219, 0.848);
-    }
-    h1 {
-      color: #5C061C; text-align: center; font-size: 4em;
-      text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    }
-    h2 {
-      text-align: center; font-size: 125%;
-    }
-    h3 {
-      text-align: center; font-size: 90%;
-    }
-    ul {
-       text-align: center; font-size: 90%;
-    }
-    .imagen-uno {
-      width: 300px;
-      height: 200px;
-      display: block;
-      margin: 0px auto;
-      float:right;
-    }
-    .imagen-dos {
-      width: 300px;
-      height: 180px;
-       margin: 0 auto;
-      float:left;
-    }
-    .imagen-uno,
-    .imagen-dos {
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-    }
-    .contenedor-tarjeta {
-      display: flow-root;
-    }
-    button {
-     background-color: #5C061C; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer
-    }
-    legend {
-       text-align: center; font-size: 90%;
-    }
-    p {
-      color: rgb(76, 1, 1);
-    }
-    
-    body{
-      background-image:
-      linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
-      url(../imagenes/garras.jpeg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }  
-      .texto {
-        width: 45%;
-        max-width: 520px;
-        box-sizing: border-box;
-        padding: 16px;
-        
-        font-size: 100%;
-        line-height: 1.5;
-      }
+:root {
+  --color-vino: #5c061c;
+  --color-texto: rgb(76, 1, 1);
+  --color-fondo: rgba(252, 237, 219, 0.848);
+  --sombra-texto: 2px 2px 4px rgb(0, 0, 0);
+  --sombra-imagen: 0 4px 10px rgba(0, 0, 0, 0.25);
+  --radio-imagen: 16px;
+}
 
-      .texto-izquierda {
-        margin: 0 auto 16px 0;
-        text-align: left;
-      }
+/* Base */
+body {
+  background-color: var(--color-fondo);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+    url(../imagenes/garras.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-      .texto-derecha {
-        margin: 0 0 16px auto;
-        text-align: right;
-      }
+p {
+  color: var(--color-texto);
+}
 
-      @media (max-width: 600px) {
-        .texto {
-          width: 100%;
-        }
+/* Encabezados y contenido */
+h1 {
+  color: var(--color-vino);
+  text-align: center;
+  font-size: 4em;
+  text-shadow: var(--sombra-texto);
+}
 
-        .texto-derecha {
-          margin-left: 0;
-        }
-       
-  
-       
-      }
-   
+h2 {
+  text-align: center;
+  font-size: 125%;
+}
+
+h3 {
+  text-align: center;
+  font-size: 90%;
+}
+
+ul {
+  text-align: center;
+  font-size: 90%;
+}
+
+legend {
+  text-align: center;
+  font-size: 90%;
+}
+
+/* Imágenes y contenedores */
+.contenedor-tarjeta {
+  display: flow-root;
+}
+
+.imagen-uno,
+.imagen-dos {
+  border-radius: var(--radio-imagen);
+  box-shadow: var(--sombra-imagen);
+}
+
+.imagen-uno {
+  display: block;
+  float: right;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.imagen-dos {
+  float: left;
+  width: 300px;
+  height: 180px;
+  margin: 0 auto;
+}
+
+/* Texto */
+.texto {
+  box-sizing: border-box;
+  width: 45%;
+  max-width: 520px;
+  padding: 16px;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+.texto-izquierda {
+  margin: 0 auto 16px 0;
+  text-align: left;
+}
+
+.texto-derecha {
+  margin: 0 0 16px auto;
+  text-align: right;
+}
+
+/* Acciones */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-vino);
+  color: white;
+  cursor: pointer;
+}
+
+/* Diseño adaptable */
+@media (max-width: 600px) {
+  .texto {
+    width: 100%;
+  }
+
+  .texto-derecha {
+    margin-left: 0;
+  }
+}
