@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="spa">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rueda Libre</title>
-  <link rel="stylesheet" href="../ruedalibre/css/style.css">
+  <link rel="stylesheet" href="../paginaruedalibre/css/style.css">
 </head>
 
-*// esta linea es solo prueba de git hub*
+
 <body>
-  <fieldset>
     <h1>Rueda Libre</h1>
+    <header>
     <nav class="navegacion" aria-label="Navegación principal">
     <a href="#contacto">Contacto</a>
     <a href="#deportes">Deportes</a>
   </nav>
 </header>
-  </fieldset>
 
   <h2>Bienvenido a Rueda Libre</h2>
   <h2>¡Explora nuestra tienda de bicicletas y accesorios!</h2>
-  <div class="contenedor-tarjeta">
+  <figure class="contenedor-tarjeta">
     <p class="texto texto-izquierda">
       En Rueda Libre, nos apasiona el ciclismo y queremos compartir esa pasión contigo. Descubre nuestra amplia gama de
       bicicletas, desde modelos de montaña hasta bicicletas urbanas, así como accesorios y ropa para ciclistas de todos
       los niveles.
     </p>
     <div class="imagen-con-botton">
-      <img class="imagen-uno" src="../ruedalibre/imagenes/niño.jpg.jpeg" alt="niño bicicleta">
+      <img class="imagen-uno" src="../paginaruedalibre/imagenes/niño.jpg.jpeg" alt="niño bicicleta">
       <button onclick="window.location.href='https://www.ruedalibre.com/catalogo'">Explorar Catálogo</button>
-    </div>
+    </figure>
     <aside>
       <h3>tambien tenemos nuestras rutas de practica en la ciudad</h3>
       <ul>
@@ -43,7 +42,7 @@
     <fieldset id="deportes">
       <legend>tambien puedes encontrar</legend>
       <p>
-        <label for="deporte">Deporte:</label>
+        <label for="deporte">Otros Deporte:</label>
         <select id="deporte" name="deporte">
           <option value="https://github.com/migueh3223-hub/ruedalibre.git">Montaña</option>
           <option value="https://gemini.google.com/app?hl=es">Skate</option>
@@ -51,15 +50,15 @@
         </select> <button onclick="mostrarRuta()">Mostrar Pagina</button>
       </p>
     </fieldset>
-    <img class="imagen-dos" src="../ruedalibre/imagenes/bmx.jpg.jpeg" alt="Muchachos practicando BMX">
+    <img class="imagen-dos" src="../paginaruedalibre/imagenes/bmx.jpg.jpeg" alt="Muchachos practicando BMX">
   </div>
-  <div>
+  <footer>
     <p>
       Visítanos en nuestra tienda física o explora nuestro catálogo en línea para encontrar la bicicleta perfecta para
       ti. ¡Únete a la comunidad de Rueda Libre y disfruta del placer de pedalear!
     </p>
 
-  </div>
+  </footer>
   <footer id="contacto">
     <h3>¡Gracias por elegir Rueda Libre! ¡Te esperamos con los brazos
       abiertos!</h3>
@@ -76,8 +75,6 @@
       window.open(url, "_blank");
     }
   </script>
-
-  </fieldset>
 </body>
 
 </html>
