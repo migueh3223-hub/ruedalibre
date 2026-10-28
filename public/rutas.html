@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscripción a rutas | Rueda Libre</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="../ruedalibre.html">Inicio</a>
+      <a href="bicicletas.html">Bicicletas y precios</a>
+      <a href="rutas.html" aria-current="page">Inscripción a rutas</a>
+    </nav>
+  </header>
+
+  <main class="pagina-publica">
+    <a class="enlace-inicio" href="../ruedalibre.html">← Volver a la página principal</a>
+    <h1>Inscríbete en una ruta</h1>
+    <p class="aviso-formulario">Este formulario es una demostración y todavía no envía ni guarda datos.</p>
+
+    <form class="formulario-ruta" id="formulario-ruta">
+      <div class="campo-formulario">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="ruta">Ruta de interés</label>
+        <select id="ruta" name="ruta" required>
+          <option value="">Selecciona una ruta</option>
+          <option value="montana">Ruta de montaña</option>
+          <option value="urbana">Ruta urbana</option>
+          <option value="carretera">Ruta de carretera</option>
+        </select>
+      </div>
+
+      <div class="campo-formulario">
+        <label for="experiencia">Experiencia o comentario (opcional)</label>
+        <textarea id="experiencia" name="experiencia" rows="4"></textarea>
+      </div>
+
+      <button type="submit">Solicitar inscripción</button>
+      <p class="estado-formulario" id="estado-formulario" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById("formulario-ruta").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("estado-formulario").textContent =
+        "El formulario aún no está conectado a un sistema de reservas. Contáctanos para confirmar tu inscripción.";
+    });
+  </script>
+</body>
+
+</html>
