@@ -21,8 +21,8 @@ body {
 
 p {
   color: var(--color-texto);
+ 
 }
-
 /* Encabezados y contenido */
 h1 {
   color: var(--color-vino);
@@ -100,6 +100,7 @@ legend {
 /* Imágenes y contenedores */
 .contenedor-tarjeta {
   display: flow-root;
+  
 }
 
 .imagen-uno,
@@ -107,7 +108,12 @@ legend {
   border-radius: var(--radio-imagen);
   box-shadow: var(--sombra-imagen);
 }
-
+.acomoda2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
 .imagen-uno {
   display: block;
   float: right;
@@ -116,10 +122,20 @@ legend {
   margin: 0 auto;
 }
 
+.acomoda2 .imagen-uno {
+  float: none;
+  width: 100%;
+  margin: 0;
+  object-fit: cover;
+}
+.acomodacioncl4 {
+  display: flex;
+  justify-content: space-around;
+}
+
 .imagen-dos {
-  float: left;
   width: 300px;
-  height: 180px;
+  height: 170px;
   margin: 0 auto;
 }
 
@@ -134,8 +150,14 @@ legend {
 }
 
 .texto-izquierda {
-  margin: 0 auto 16px 0;
-  text-align: left;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+.acomoda2 .texto-izquierda {
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .texto-derecha {
@@ -153,7 +175,6 @@ button {
   cursor: pointer;
 }
 
-/* Diseño adaptable */
 @media (max-width: 600px) {
   .navegacion {
     width: calc(100% - 1.5rem);
@@ -165,6 +186,10 @@ button {
   .navegacion a {
     flex: 1 1 40%;
     padding: 0.65rem 0.5rem;
+  }
+
+  .acomoda2 {
+    grid-template-columns: 1fr;
   }
 
   .texto {
