@@ -175,6 +175,18 @@ button {
   cursor: pointer;
 }
 
+.producto-imagen {
+  height: 14rem;
+  object-fit: cover;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--color-vino);
+  --bs-btn-border-color: var(--color-vino);
+  --bs-btn-hover-bg: #7d1731;
+  --bs-btn-hover-border-color: #7d1731;
+}
+
 @media (max-width: 600px) {
   .navegacion {
     width: calc(100% - 1.5rem);
